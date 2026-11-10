@@ -1,6 +1,6 @@
 const renderWidth = 160 * 1.5
 const renderHeight = 90 * 1.5
-const imageUrl = 'https://github.com/gitchx/hydra/blob/main/images/aurion.jpeg'
+const imageUrl = 'https://raw.githubusercontent.com/gitchx/hydra/refs/heads/main/images/aurion.jpeg'
 
 const hydraSynth = new Hydra({
   canvas: document.querySelector('#hydra-canvas'),
