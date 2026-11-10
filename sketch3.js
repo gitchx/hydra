@@ -1,3 +1,16 @@
+const renderWidth = 160 * 1.5
+const renderHeight = 90 * 1.5
+const imageUrl = 'https://github.com/gitchx/hydra/blob/main/images/aurion.jpeg'
+
+const hydraSynth = new Hydra({
+  canvas: document.querySelector('#hydra-canvas'),
+  width: renderWidth,
+  height: renderHeight,
+  detectAudio: false,
+})
+
+hydraSynth.setResolution(renderWidth, renderHeight)
+
 const cols = 20
 const rows = 20
 
@@ -12,7 +25,7 @@ const blink = (d) =>
 const tri = (x, y, d) =>
   shape(3, size, 0)
     .rotate(Math.PI / 3)
-    .scale(1, 1, 0.6)
+    .scale(1, 1, 0.8)
     .scrollX(x)
     .scrollY(y)
     .mult(
@@ -34,5 +47,9 @@ for (let y = 0; y < rows; y++) {
   }
 }
 
-output.out(o0)
-render(o0)
+s0.initImage(imageUrl)
+
+src(s0)
+  .blend(output, 0.3)
+  .out()
+
