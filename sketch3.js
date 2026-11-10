@@ -1,6 +1,6 @@
-const renderWidth = 160 * 1.5
-const renderHeight = 90 * 1.5
-const imageUrl = 'https://raw.githubusercontent.com/gitchx/hydra/refs/heads/main/images/aurion.jpeg'
+const renderWidth = 160 * 2
+const renderHeight = 90 * 2
+const imageUrl = 'https://raw.githubusercontent.com/gitchx/hydra/refs/heads/main/images/aurion_equip.jpeg'
 
 const hydraSynth = new Hydra({
   canvas: document.querySelector('#hydra-canvas'),
@@ -50,6 +50,6 @@ for (let y = 0; y < rows; y++) {
 s0.initImage(imageUrl)
 
 src(s0)
-  .blend(output, 0.3)
+  .blend(output, 0.2)
   .out()
 
