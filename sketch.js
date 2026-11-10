@@ -7,8 +7,11 @@ const hydraSynth = new Hydra({
 
 hydraSynth.setResolution(1000, 1000)
 
-s0.initImage('/images/TS9.jpeg')
+s0.initImage('https://raw.githubusercontent.com/gitchx/hydra/refs/heads/main/images/TS9_2.jpeg')
 
 src(s0)
-  .blend(osc(1, 1, 1), 0.5)
+  .blend(
+	   osc(1, 1, 1).rotate(Math.PI / 4),
+		 0.5
+	)
   .out()
